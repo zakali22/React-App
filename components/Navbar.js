@@ -4,26 +4,34 @@ class NavBar extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      currentLang: 'All'
+      currentLang: 'All',
     };
+    this.changeLanguage = this.changeLanguage.bind(this);
   }
-  changeLang(language){
-    this.setState = {
-      currentLang: language
-    };
+  changeLanguage(language){
+    this.setState(function(){
+        return {
+          currentLang: language,
+        }
+    });
   }
+
   render(){
-    var languages = ['All', 'Javascript', 'Ruby', 'Python', 'Java', 'PHP'];
+    var langList = ['All','Javascript','Ruby','CSS','Python','Java', 'PHP'];
     return (
-      <ul className="lists">
-        {languages.map(function(lang){
-          return (
-            <li
-              onClick={this.changeLang(lang)}
-            >{lang}</li>
-          )
-        }, this)}
-      </ul>
+      <div>
+        <ul className="lists">
+          {langList.map(function(langItem){
+            return (
+              <li
+                style={langItem === this.state.currentLang ? {color: 'coral'} : null}
+                onClick={this.changeLanguage.bind(null, langItem)}
+                key={langItem}>
+              {langItem}</li>
+            )
+          }, this)}
+        </ul>
+      </div>
     )
   }
 }
