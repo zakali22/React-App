@@ -1,4 +1,9 @@
 var React = require('react');
+var DisplayLang = require('./DisplayLang');
+
+// This file contains a container component which
+// sets initial states and changes them and sends props to
+// the presentational component DisplayLang
 
 class NavBar extends React.Component {
   constructor(props){
@@ -17,21 +22,11 @@ class NavBar extends React.Component {
   }
 
   render(){
-    var langList = ['All','Javascript','Ruby','CSS','Python','Java', 'PHP'];
     return (
-      <div>
-        <ul className="lists">
-          {langList.map(function(langItem){
-            return (
-              <li
-                style={langItem === this.state.currentLang ? {color: 'coral'} : null}
-                onClick={this.changeLanguage.bind(null, langItem)}
-                key={langItem}>
-              {langItem}</li>
-            )
-          }, this)}
-        </ul>
-      </div>
+      <DisplayLang
+        currentLang={this.state.currentLang}
+        changeLanguage={this.changeLanguage}
+      />
     )
   }
 }
