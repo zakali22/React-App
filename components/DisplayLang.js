@@ -3,6 +3,7 @@ var PropTypes = require('prop-types');
 
 // This file contains a presentational component which only
 // takes in props from a NavBar component and renders it to the view
+var  langList = ['All','Javascript','Python','Ruby','Java','CSS','PHP'];
 
 function DisplayLang(props){
   return (
