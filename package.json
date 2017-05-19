@@ -29,5 +29,13 @@
     "style-loader": "^0.17.0",
     "webpack": "^2.5.1",
     "webpack-dev-server": "^2.4.5"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zakali22/React-App.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zakali22/React-App/issues"
+  },
+  "homepage": "https://github.com/zakali22/React-App#readme"
 }
