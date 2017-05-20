@@ -1,5 +1,6 @@
 var React = require('react');
 var PropTypes = require('prop-types');
+var Navbar = require('./Navbar');
 
 // This file contains a presentational component which only
 // takes in props from a NavBar component and renders it to the view
@@ -22,6 +23,12 @@ function DisplayLang(props){
     </div>
   )
 }
+
+DisplayLang.propTypes = {
+  currentLang: PropTypes.string.isRequired,
+  changeLanguage: PropTypes.func.isRequired
+};
+
 
 
 module.exports = DisplayLang;

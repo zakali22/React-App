@@ -17,3 +17,8 @@
   font-weight: bold;
   cursor: pointer;
 }
+
+.individualRepo h3 {
+  color: black;
+  font-size: 30px;
+}
