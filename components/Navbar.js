@@ -6,6 +6,13 @@ var api = require('../utils/api');
 // sets initial states and changes them and sends props to
 // the presentational component DisplayLang
 
+var loadingTag = {
+  color: 'coral',
+  textAlign: 'center',
+  marginTop: '30px',
+  fontSize: '30px'
+};
+
 class Navbar extends React.Component {
   constructor(props){
     super(props);
@@ -45,7 +52,9 @@ class Navbar extends React.Component {
           changeLanguage={this.changeLanguage}
         />
         {!this.state.repos
-          ? <p>Loading..</p> :
+          ? <p
+            style={loadingTag}>
+            Loading..</p> :
           <RepoGrid repos={this.state.repos} />
         }
       </div>

@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
 .lists {
   padding: 0;
   list-style: none;
@@ -13,12 +17,38 @@
   display: inline-block;
   padding: 10px;
   font-size: 20px;
-  font-family: 'Raleway', sans-serif;
   font-weight: bold;
   cursor: pointer;
 }
 
-.individualRepo h3 {
-  color: black;
-  font-size: 30px;
+.fullRepo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-right: 20px;
+}
+
+.eachSection {
+  text-align: center;
+  list-style: none;
+  margin-top: 50px;
+}
+
+.eachSection p {
+  padding-left: 30px;
+  font-weight: bold;
+}
+
+.eachSection .image{
+  width: 170px;
+  border-radius: 50%;
+}
+
+.eachSection ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.eachSection ul li {
+  padding-top: 10px;
 }
