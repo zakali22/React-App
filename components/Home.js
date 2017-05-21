@@ -7,7 +7,7 @@ class Home extends React.Component {
       <div className="homepage">
         <h1>Explore and compare Github repositories</h1>
         <Link to='/battle' className="button">
-          Compete
+          Compare
         </Link>
       </div>
     )
