@@ -54,7 +54,7 @@ class Navbar extends React.Component {
         {!this.state.repos
           ? <p
             style={loadingTag}>
-            Loading..</p> :
+            Loading...</p> :
           <RepoGrid repos={this.state.repos} />
         }
       </div>
