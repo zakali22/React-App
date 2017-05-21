@@ -1,10 +1,20 @@
 var React = require('react');
-var NavBar = require('./Navbar');
+var Navbar = require('./Navbar');
+var ReactRouter = require('react-router-dom');
+var Router = ReactRouter.BrowserRouter;
+var Route = ReactRouter.Route;
+var Links = require('./Links');
+
 
 class App extends React.Component {
   render(){
     return (
-      <NavBar />
+      <Router>
+        <div>
+          <Links />
+          <Route path='/popular' component={Navbar} />
+        </div>
+      </Router>
     )
   }
 }
