@@ -4,9 +4,6 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 
-li {
-  color: 'coral';
-}
 
 a:link, a:hover, a:visited, a:active {
   color: #ff7f50;
@@ -74,4 +71,31 @@ a:link, a:hover, a:visited, a:active {
 
 .active {
   font-weight: bold;
+}
+
+.homepage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 200px;
+  background-color: coral;
+  height: 75vh;
+  width: 100%;
+  font-size: 20px;
+  color: white;
+}
+
+.button {
+  border: 1px solid white;
+  width: 150px;
+  padding: 15px;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 20px;
+  border-radius: 20px;
+  background-color: white;
+}
+
+.button:active {
+  transform: translateY(2px);
 }
