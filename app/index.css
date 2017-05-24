@@ -86,6 +86,10 @@ a:link, a:hover, a:visited, a:active {
   color: white;
 }
 
+.homepage span {
+  text-decoration: underline;
+}
+
 .button {
   border: 1px solid white;
   width: 150px;

@@ -6,7 +6,7 @@ class Home extends React.Component {
   render(){
     return (
       <div className="homepage">
-        <h1>Explore and <Rewrite cursor={false} typingInterval={190} items={['compare', 'battle']}/> Github repositories</h1>
+        <h1><span><Rewrite cursor={false} typingInterval={120} items={['Explore', 'Discover', 'Compare', 'Battle']}/></span> the most popular Github repositories</h1>
         <Link to='/battle' className="button">
           Compare
         </Link>
