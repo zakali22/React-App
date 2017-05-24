@@ -88,6 +88,7 @@ a:link, a:hover, a:visited, a:active {
 
 .homepage span {
   text-decoration: underline;
+  line-height: 1.2em;
 }
 
 .button {
@@ -124,4 +125,22 @@ a:link, a:hover, a:visited, a:active {
 .error span {
   color: coral;
   font-size: 25px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 100px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form label {
+  font-size: 20px;
+  color: coral;
+  font-family: 'Raleway', sans-serif;
 }
