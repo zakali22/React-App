@@ -16,30 +16,35 @@ class Battle extends React.Component {
   }
 
   submitChange(playerId, name){
-    var newState = {};
     this.setState(function(){
+        var newState = {};
         newState[playerId + 'Name'] = name,
-        newState[playerId + 'Image'] = 'https://github.com' + name + '.png?size=200'
+        newState[playerId + 'Image'] = 'https://github.com/' + name + '.png?size=200'
 
         return newState;
-    })
+    });
   }
 
   render(){
+    var playerOneName = this.state.playerOneName;
+    var playerTwoName = this.state.playerTwoName;
     return (
       <div>
         <div className="row">
-          <PlayerForm
-            id={this.state.playerOneName}
-            label='Player One'
-            onSubmit={this.submitChange}
-          />
-
-          <PlayerForm
-            id={this.state.playerTwoName}
-            label='Player Two'
-            onSubmit={this.submitChange}
-          />
+          {!playerOneName &&
+            <PlayerForm
+              id= 'playerOne'
+              label='Player One'
+              onSubmit={this.submitChange}
+            />
+          }
+          {!playerTwoName &&
+            <PlayerForm
+              id= 'playerTwo'
+              label='Player Two'
+              onSubmit={this.submitChange}
+            />
+          }
         </div>
       </div>
     )

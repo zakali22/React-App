@@ -6,21 +6,23 @@ class PlayerForm extends React.Component {
     this.state = {
       name: ''
     };
+
+    this.typeBinding = this.typeBinding.bind(this);
+    this.submittingChange = this.submittingChange.bind(this);
   }
 
   typeBinding(event){
+    var value = event.target.value;
     this.setState(function(){
       return {
-        name: event.target.value
-      };
+        name: value
+      }
     })
   }
 
-  submittingChange(){
-    this.props.onSubmit(
-      this.props.id,
-      this.state.name
-    );
+  submittingChange(event){
+    event.preventDefault();
+    this.props.onSubmit(this.props.id,this.state.name);
   }
 
   render(){
@@ -30,11 +32,15 @@ class PlayerForm extends React.Component {
           {this.props.label}
         </label>
         <input
+          type='text'
+          placeholder='github username'
           id='username'
           value={this.state.name}
           onChange={this.typeBinding}
         />
-        <button type='submit'>
+        <button
+          type='submit'
+          disabled={!this.state.name}>
           Submit
         </button>
       </form>
