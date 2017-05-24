@@ -1,4 +1,5 @@
 var React = require('react');
+var PropTypes = require('prop-types');
 
 class PlayerForm extends React.Component {
   constructor(props){
@@ -47,5 +48,11 @@ class PlayerForm extends React.Component {
     )
   }
 }
+
+PlayerForm.propTypes = {
+  id: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired
+  onSubmit: PropTypes.func.isRequired
+};
 
 module.exports = PlayerForm;
