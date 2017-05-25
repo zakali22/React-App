@@ -1,5 +1,6 @@
 var React = require('react');
 var PlayerForm = require('./Playerform');
+var Profile = require('./Profile');
 
 class Battle extends React.Component {
   constructor(props){
@@ -43,7 +44,7 @@ class Battle extends React.Component {
           }
           {playerOneImage !== null &&
             <Profile
-              image={playerOneName}
+              image={playerOneImage}
               name={playerOneName}
               id='playerOne'
             />
@@ -54,6 +55,21 @@ class Battle extends React.Component {
               label='Player Two'
               onSubmit={this.submitChange}
             />
+          }
+          {playerTwoImage !== null &&
+            <Profile
+              image={playerTwoImage}
+              name={playerTwoName}
+              id='playerOne'
+            />
+          }
+        </div>
+        <div className="renderButton">
+          {
+            playerOneName && playerTwoName &&
+              <button className="battleButton">
+                Battle
+              </button>
           }
         </div>
       </div>

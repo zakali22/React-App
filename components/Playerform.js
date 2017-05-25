@@ -29,7 +29,6 @@ class PlayerForm extends React.Component {
   render(){
     return (
       <div>
-        <h1>Battle two Github users</h1>
         <form className="form" onSubmit={this.submittingChange}>
           <label htmlFor='username'>
             {this.props.label}

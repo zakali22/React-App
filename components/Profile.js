@@ -1,24 +1,27 @@
 var React = require('react');
-var PropTypes = require(''prop-types);
+
 
 class Profile extends React.Component {
+  onReset(id){
+
+  }
   render(){
     return (
       <div>
-        <img
-          className="avatar"
-          src={this.props.image}
-        />
-        <h1>@{this.props.name}</h1>
-        <button className="reset"
-          onClick={this.onReset.bind(null, this.props.id)}>
-            Reset
-        </button>
+        <div className="form">
+          <img
+            className="avatar"
+            src={this.props.image}
+          />
+          <h1>@{this.props.name}</h1>
+          <button className="reset"
+              onClick={this.onReset.bind(null, this.props.id)}>
+              Reset
+          </button>
+        </div>
       </div>
     )
   }
 }
 
-Profile.propTypes = {
-  image: ''
-};
+module.exports = Profile;

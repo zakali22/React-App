@@ -178,6 +178,44 @@ input:focus {
   transform: translateY(2px);
 }
 
+.avatar {
+  width: 170px;
+  border-radius: 50%;
+
+}
+
+.reset {
+  border: 1px solid coral;
+  width: 40%;
+  background-color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: coral;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 17px;
+  outline: none;
+}
+
+.renderButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.battleButton {
+  border: 1px solid orange;
+  width: 10%;
+  background-color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: orange;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  outline: none;
+}
+
 @media screen and (min-width: 1200px) {
   .row {
     margin-top: 150px;
