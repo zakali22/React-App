@@ -28,30 +28,33 @@ class PlayerForm extends React.Component {
 
   render(){
     return (
-      <form className="form" onSubmit={this.submittingChange}>
-        <label htmlFor='username'>
-          {this.props.label}
-        </label>
-        <input
-          type='text'
-          placeholder='github username'
-          id='username'
-          value={this.state.name}
-          onChange={this.typeBinding}
-        />
-        <button
-          type='submit'
-          disabled={!this.state.name}>
-          Submit
-        </button>
-      </form>
+      <div>
+        <h1>Battle two Github users</h1>
+        <form className="form" onSubmit={this.submittingChange}>
+          <label htmlFor='username'>
+            {this.props.label}
+          </label>
+          <input
+            type='text'
+            placeholder='github username'
+            id='username'
+            value={this.state.name}
+            onChange={this.typeBinding}
+          />
+          <button
+            type='submit'
+            disabled={!this.state.name}>
+            Submit
+          </button>
+        </form>
+      </div>
     )
   }
 }
 
 PlayerForm.propTypes = {
   id: PropTypes.string.isRequired,
-  label: PropTypes.string.isRequired
+  label: PropTypes.string.isRequired,
   onSubmit: PropTypes.func.isRequired
 };
 

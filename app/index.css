@@ -87,8 +87,8 @@ a:link, a:hover, a:visited, a:active {
 }
 
 .homepage span {
-  text-decoration: underline;
-  line-height: 1.2em;
+  background-color: white;
+  color: coral;
 }
 
 .button {
@@ -174,6 +174,10 @@ input:focus {
   outline: none;
 }
 
+.form:active {
+  transform: translateY(2px);
+}
+
 @media screen and (min-width: 1200px) {
   .row {
     margin-top: 150px;
@@ -181,5 +185,6 @@ input:focus {
 
   .homepage {
     font-size: 25px;
+    padding-top: 250px;
   }
 }

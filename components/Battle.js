@@ -28,6 +28,9 @@ class Battle extends React.Component {
   render(){
     var playerOneName = this.state.playerOneName;
     var playerTwoName = this.state.playerTwoName;
+    var playerOneImage = this.state.playerOneImage;
+    var playerTwoImage = this.state.playerTwoImage;
+
     return (
       <div>
         <div className="row">
@@ -36,6 +39,13 @@ class Battle extends React.Component {
               id= 'playerOne'
               label='Player One'
               onSubmit={this.submitChange}
+            />
+          }
+          {playerOneImage !== null &&
+            <Profile
+              image={playerOneName}
+              name={playerOneName}
+              id='playerOne'
             />
           }
           {!playerTwoName &&
