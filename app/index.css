@@ -205,7 +205,7 @@ input:focus {
 
 .battleButton {
   border: 1px solid orange;
-  width: 10%;
+  width: 100%;
   background-color: white;
   padding-top: 10px;
   padding-bottom: 10px;

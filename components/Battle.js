@@ -1,6 +1,7 @@
 var React = require('react');
 var PlayerForm = require('./Playerform');
 var Profile = require('./Profile');
+var Link = require('react-router-dom').Link;
 
 class Battle extends React.Component {
   constructor(props){
@@ -27,6 +28,7 @@ class Battle extends React.Component {
   }
 
   render(){
+    var match = this.props.match;
     var playerOneName = this.state.playerOneName;
     var playerTwoName = this.state.playerTwoName;
     var playerOneImage = this.state.playerOneImage;
@@ -67,9 +69,16 @@ class Battle extends React.Component {
         <div className="renderButton">
           {
             playerOneName && playerTwoName &&
-              <button className="battleButton">
-                Battle
-              </button>
+                <Link
+                  to={{
+                    pathname: match.url + '/results',
+                    search: '?playerOneName=' + playerOneName + '&playerTwoName=' + playerTwoName
+                  }}
+                >
+                  <button className="battleButton">
+                    Battle
+                  </button>
+              </Link>
           }
         </div>
       </div>
