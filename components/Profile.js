@@ -2,9 +2,6 @@ var React = require('react');
 
 
 class Profile extends React.Component {
-  onReset(id){
-
-  }
   render(){
     return (
       <div>
@@ -15,7 +12,7 @@ class Profile extends React.Component {
           />
           <h1>@{this.props.name}</h1>
           <button className="reset"
-              onClick={this.onReset.bind(null, this.props.id)}>
+              onClick={this.props.onReset.bind(null, this.props.id)}>
               Reset
           </button>
         </div>

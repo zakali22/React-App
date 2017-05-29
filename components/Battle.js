@@ -13,8 +13,18 @@ class Battle extends React.Component {
       playerOneImage: null,
       playerTwoImage: null
     };
-
+    this.reset = this.reset.bind(this);
     this.submitChange = this.submitChange.bind(this);
+  }
+
+  reset(playerId){
+    this.setState(function(){
+        var newState = {};
+        newState[playerId + 'Name'] = '',
+        newState[playerId + 'Image'] = null
+
+        return newState;
+    });
   }
 
   submitChange(playerId, name){
@@ -49,6 +59,7 @@ class Battle extends React.Component {
               image={playerOneImage}
               name={playerOneName}
               id='playerOne'
+              onReset={this.reset}
             />
           }
           {!playerTwoName &&
@@ -62,7 +73,8 @@ class Battle extends React.Component {
             <Profile
               image={playerTwoImage}
               name={playerTwoName}
-              id='playerOne'
+              id='playerTwo'
+              onReset={this.reset}
             />
           }
         </div>
