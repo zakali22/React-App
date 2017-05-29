@@ -174,7 +174,7 @@ input:focus {
   outline: none;
 }
 
-.form:active {
+.form button:active {
   transform: translateY(2px);
 }
 
