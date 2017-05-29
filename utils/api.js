@@ -35,6 +35,23 @@ function calculateScore(profile, repos){
 }
 
 
+function getUserData(profile){
+  return axios.all([
+    getProfile(profile),
+    getRepos(profile)
+  ]).then(function(data){
+    var profile = data[0];
+    var repo = data[1];
+
+    return {
+      profile: profile,
+      score: calculateScore(profile, repo)
+    }
+  })
+}
+
+
+
 module.exports = {
 
   fetchData: function(lang){
