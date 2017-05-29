@@ -11,6 +11,12 @@ function getProfile(username){
     });
 }
 
+function getRepos(username){
+  return axios.get('https://github.com/users/' + username + '/repos' + params + '&per-page=100')
+    .then(function(user){
+      return user.data;
+    });
+}
 
 module.exports = {
 
