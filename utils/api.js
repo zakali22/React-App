@@ -51,6 +51,12 @@ function getUserData(profile){
 }
 
 
+function sortUsers(profiles){
+  return profiles.sort(function(a, b){
+    return b.sort - a.sort;
+  })
+}
+
 
 module.exports = {
 
