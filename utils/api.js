@@ -18,6 +18,17 @@ function getRepos(username){
     });
 }
 
+
+
+function getStars(repos){
+  return repos.data.reduce(function(count, repo){
+    return count + repo.stargazers_count;
+  }, 0)
+}
+
+
+
+
 module.exports = {
 
   fetchData: function(lang){
