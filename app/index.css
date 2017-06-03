@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Raleway|Bubbler+One');
 
 body {
   font-family: 'Raleway', sans-serif;
@@ -8,6 +8,21 @@ body {
 a:link, a:hover, a:visited, a:active {
   color: #ff7f50;
   text-decoration: none;
+}
+
+.resultListing {
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+   list-style: none;
+   text-align: left;
+   padding: 0;
+   font-weight: light;
+   font-size: 20px;
+}
+
+.resultListing span {
+  font-weight: bold;
 }
 
 .lists {

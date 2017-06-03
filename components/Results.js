@@ -9,14 +9,29 @@ var loadingTag = {
   marginTop: '30px',
   fontSize: '30px'
 };
+var loser = {
+  color: 'red'
+};
+var winner = {
+  color: 'green'
+};
 
 class ImageTextResult extends React.Component {
   render(){
+    var profile = this.props.info.profile;
     return (
       <Profile
-        image={this.props.info.profile.avatar_url}
-        name={this.props.info.profile.login}
-      />
+        image={profile.avatar_url}
+        name={profile.login}>
+            <ul className='resultListing'>
+              {profile.name && <li><span>Name</span>: {profile.name}</li>}
+              {profile.location && <li><span>Location</span>: {profile.location}</li>}
+              {profile.company && <li><span>Company</span>: {profile.company}</li>}
+              <li><span>Followers</span>: {profile.followers}</li>
+              <li><span>Following</span>: {profile.following}</li>
+              <li><span>Public Repos</span>: {profile.public_repos}</li>
+            </ul>
+      </Profile>
     )
   }
 }
@@ -27,7 +42,10 @@ class PlayerResult extends React.Component {
     console.log(this.props.profile);
     return (
       <div className='form'>
-        <h1>{this.props.title}</h1>
+        <h1
+          style={this.props.title === 'Winner' ? winner : loser}>
+          {this.props.title}
+        </h1>
         <h3>Score: {this.props.score}</h3>
         <ImageTextResult info={this.props.profile}/>
       </div>
