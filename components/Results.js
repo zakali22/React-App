@@ -3,12 +3,7 @@ var api = require('../utils/api');
 var queryString = require('query-string');
 var Link = require('react-router-dom').Link;
 var Profile = require('./Profile');
-var loadingTag = {
-  color: 'coral',
-  textAlign: 'center',
-  marginTop: '30px',
-  fontSize: '30px'
-};
+var Loading = require('./Loading');
 var loser = {
   color: 'red'
 };
@@ -100,7 +95,7 @@ class Results extends React.Component {
     var loading = this.state.loading;
 
     if(loading === true){
-      return <p style={loadingTag}>Loading...</p>
+      return <Loading/>
     }
 
     if(error){

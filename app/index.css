@@ -23,6 +23,7 @@ a:link, a:hover, a:visited, a:active {
 
 .resultListing span {
   font-weight: bold;
+  color: coral;
 }
 
 .lists {
