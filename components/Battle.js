@@ -57,10 +57,12 @@ class Battle extends React.Component {
           {playerOneImage !== null &&
             <Profile
               image={playerOneImage}
-              name={playerOneName}
-              id='playerOne'
-              onReset={this.reset}
-            />
+              name={playerOneName}>
+                  <button className="reset"
+                      onClick={this.reset.bind(null, 'playerOne')}>
+                      Reset
+                  </button>
+            </Profile>
           }
           {!playerTwoName &&
             <PlayerForm
@@ -72,10 +74,12 @@ class Battle extends React.Component {
           {playerTwoImage !== null &&
             <Profile
               image={playerTwoImage}
-              name={playerTwoName}
-              id='playerTwo'
-              onReset={this.reset}
-            />
+              name={playerTwoName}>
+                  <button className="reset"
+                      onClick={this.reset.bind(null, 'playerTwo')}>
+                      Reset
+                  </button>
+            </Profile>
           }
         </div>
         <div className="renderButton">

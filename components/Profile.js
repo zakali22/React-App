@@ -11,10 +11,7 @@ class Profile extends React.Component {
             src={this.props.image}
           />
           <h1>@{this.props.name}</h1>
-          <button className="reset"
-              onClick={this.props.onReset.bind(null, this.props.id)}>
-              Reset
-          </button>
+          {this.props.children}
         </div>
       </div>
     )
