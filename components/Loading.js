@@ -32,6 +32,10 @@ class Loading extends React.Component {
     }.bind(this), 300)
   }
 
+  componentWillUnmount() {
+    window.clearInterval(this.interval);
+  }
+
   render(){
     return (
       <p style={loadingTag}>{this.state.text}</p>
